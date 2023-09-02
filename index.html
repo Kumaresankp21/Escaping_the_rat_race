@@ -2,10 +2,31 @@
 <html lang="en">
 
 <head>
+    <style>
+        /* Center the modal */
+        
+        .modal-dialog {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        /* Style the modal content */
+        
+        .modal-content {
+            text-align: center;
+            padding: 20px;
+        }
+        /* Style the text on the right side */
+        
+        .right-text {
+            text-align: right;
+        }
+    </style>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>FlexStart Bootstrap Template - Index</title>
+    <title>Get Intern</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -37,6 +58,33 @@
 </head>
 
 <body>
+    <div class="modal fade" id="hireModal" tabindex="-1" aria-labelledby="hireModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="centered-text">
+                        <h3>Your Door To Opportunity!</h3>
+                        <a href="#services" class="btn btn-primary">Internship</a>
+                    </div>
+                    <img src="assets/img/hiring.png" alt="We Are Hiring" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Automatically trigger the modal on page load
+        window.onload = function() {
+            var myModal = new bootstrap.Modal(document.getElementById('hireModal'));
+            myModal.show();
+        };
+    </script>
+
+
 
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top">
@@ -51,8 +99,8 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto" href="#internship">Internship</a></li>
+                    <li><a class="nav-link scrollto" href="#values">Services</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Internship</a></li>
                     <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                     <li><a class="getstarted scrollto" href="#faq">FAQ</a></li>
@@ -116,7 +164,7 @@
                     </div>
 
                     <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/ab.svg" class="img-fluid" alt="">
                     </div>
 
                 </div>
@@ -359,12 +407,12 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                    Non consectetur a erat nam at lectus urna duis?
+                                        How To Apply For Internships?
                   </button>
                                 </h2>
                                 <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                                     <div class="accordion-body">
-                                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                                        To Apply For Upcoming Batch Of Internship You Need To Fill The Interest Form In Thst Specific Domain, After That You Will Directly Receive The Selection Certificate From Us If Selected.
                                     </div>
                                 </div>
                             </div>
@@ -372,13 +420,12 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                                        How To Fill The Interest Form?
                   </button>
                                 </h2>
                                 <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                                     <div class="accordion-body">
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.
+                                        You Will Get The Interest Form Of All The Internships Domain In Above Mentioned Internship Column. Please Click On Apply Now Button, Your Response Will Help Us To Understand Your Current Skills And Need For Training During The Internship If Any.
                                     </div>
                                 </div>
                             </div>
@@ -386,13 +433,13 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                                        I Have Completed All The Necessary Steps, Whats Next?
                   </button>
                                 </h2>
                                 <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                                     <div class="accordion-body">
-                                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna
-                                        molestie at elementum eu facilisis sed odio morbi quis
+                                        If You Have Filled All The Required Field In Interest Form Correctly, You Will Receive A Selection Certificate From Us Before Your Internship Starts. All Importent Information And Anouncements Related To Internship Are Communicated Through The Discussion
+                                        From Get Intern Network On Linkedin.
                                     </div>
                                 </div>
                             </div>
@@ -408,13 +455,12 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
-                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                                        What Will Be The Duration Of Internship?
                   </button>
                                 </h2>
                                 <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                                     <div class="accordion-body">
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                                        cursus turpis massa tincidunt dui.
+                                        In Every Domain Duration Of Internship Is 4 Weeks.
                                     </div>
                                 </div>
                             </div>
@@ -422,29 +468,17 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
-                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                                        I Have Completed My Tasks Well Before Deadline.When Will I Get A Certificate?
                   </button>
                                 </h2>
                                 <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                                     <div class="accordion-body">
-                                        Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                                        You Can Submit Your Task Through Task Submission Form If You Have Received It Or Wait For It To Be Shared. If You Have Submitted The Task Before The Deadline Please Expect Your Completion Certificate In The 1st Week Of Next Month.
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
-                    Varius vel pharetra vel turpis nunc eget lorem dolor?
-                  </button>
-                                </h2>
-                                <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                                    <div class="accordion-body">
-                                        Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque
-                                        diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-                                    </div>
-                                </div>
-                            </div>
+
 
                         </div>
                     </div>
@@ -456,113 +490,6 @@
         </section>
         <!-- End F.A.Q Section -->
 
-
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
-
-            <div class="container" data-aos="fade-up">
-
-                <header class="section-header">
-                    <h2>Testimonials</h2>
-                    <p>What they are saying about us</p>
-                </header>
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                    <h3>Sara Wilsson</h3>
-                                    <h4>Designer</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                    <h3>Jena Karlis</h3>
-                                    <h4>Store Owner</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                    <h3>Matt Brandon</h3>
-                                    <h4>Freelancer</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                                </p>
-                                <div class="profile mt-auto">
-                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                    <h3>John Larson</h3>
-                                    <h4>Entrepreneur</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End testimonial item -->
-
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-
-        </section>
-        <!-- End Testimonials Section -->
 
         <!-- ======= Team Section ======= -->
         <section id="team" class="team">
@@ -582,7 +509,7 @@
                                 <img src="assets/img/man.png" class="img-fluid" alt="">
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-github"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
                                 </div>
@@ -601,7 +528,7 @@
                                 <img src="assets/img/man.png" class="img-fluid" alt="">
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-github"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
                                 </div>
@@ -620,7 +547,7 @@
                                 <img src="assets/img/man.png" class="img-fluid" alt="">
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-github"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
                                 </div>
@@ -633,7 +560,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                    <!-- <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                         <div class="member">
                             <div class="member-img">
                                 <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
@@ -650,7 +577,7 @@
                                 <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque ut possimus ipsum officia.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -781,7 +708,7 @@
                         <p>Craft Your IT Haven Here</p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="facebook"><i class="bi bi-github"></i></a>
                             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
                             <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
                         </div>
@@ -801,10 +728,10 @@
                     <div class="col-lg-2 col-6 footer-links">
                         <h4>Our Services</h4>
                         <ul>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Cloud Computing</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Database Management</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Artifical Intelligence</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
                         </ul>
                     </div>
